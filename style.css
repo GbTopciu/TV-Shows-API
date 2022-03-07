@@ -31,11 +31,12 @@ body {
     color: ghostwhite;
 }
 
-#card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: 'red'
 }
 
 .divContainer{

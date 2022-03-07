@@ -1,7 +1,7 @@
 const form = document.querySelector("#form");
 const input = document.querySelector("#input");
 const container = document.querySelector("#container");
-const card = document.querySelector("#card");
+
 
 input.addEventListener("keyup", async (e) => {
   try {
@@ -25,35 +25,35 @@ input.addEventListener("keydown", () => {
 
 const makeCard = (resdata) => {
   for (let data of resdata) {
-    const wrapper = document.createElement("div");
-    card.appendChild(wrapper);
-    wrapper.classList.add("wrapper");
-    h2Container(data.show.name);
-    imageContainer(data.show.image);
-    divContainer(data.show.summary);
+    const div = document.createElement("div");
+    container.appendChild(div);
+    div.classList.add("card");
+    h2Container(div, data.show.name);
+    imageContainer(div, data.show.image);
+    divContainer(div, data.show.summary);
   }
 };
 
-const imageContainer = (image) => {
+const imageContainer = (element, image) => {
   if (image) {
     const img = document.createElement("img");
     img.src = image.medium;
-    console.log(img);
+    element.append(img)
   } else {
     const img = document.createElement("img");
     img.alt = "No Image Found";
   }
 };
 
-const h2Container = (text) => {
+const h2Container = (element, text) => {
   const h2 = document.createElement("h2");
   h2.innerHTML = text;
-  console.log(h2);
+  element.append(h2)
 };
 
-const divContainer = (text) => {
+const divContainer = (element, text) => {
   const div = document.createElement("div");
   div.innerHTML = text;
   div.classList.add("divContainer");
-  console.log(div);
+  element.append(div)
 };
