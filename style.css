@@ -1,47 +1,115 @@
-body {
-    background-color :black;
+html {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgb(40, 42, 53), transparent),
+    linear-gradient(to top left, rgb(65, 146, 65), transparent),
+    linear-gradient(to top right, rgb(16, 16, 241), transparent);
+  background-blend-mode: initial;
+  background-attachment: fixed;
 }
 
-#title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:ghostwhite;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ghostwhite;
 }
 
 #form {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #input {
-    width: 50%;
-    height: 30px;
+  width: 50%;
+  height: 30px;
 }
 
-
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: ghostwhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: ghostwhite;
+  padding-top: 140px;
+  padding-bottom: 50px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: 'red'
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: "red";
+  border: 2px white;
+  border-style: inset;
+  text-align: center;
+  margin-top: 20px;
+  padding: 21px 21px 21px 21px;
+  transition: ease all .5s;
 }
 
-.divContainer{
-    width: 50%;
-    text-align: center;
-    border-style: double;
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 30px;
+  background: linear-gradient(rgb(40, 42, 53), transparent),
+    linear-gradient(to top left, rgb(65, 146, 65), transparent),
+    linear-gradient(to top right, rgb(16, 16, 241), transparent);
+  background-blend-mode: initial;
+  background-attachment: fixed;
+  opacity: 1;
 }
 
+#button {
+  height: 36px;
+  background-color: #3cc74e;
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: rgb(102, 182, 108);
+}
+
+.link {
+  background-color: #3cc74e;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link:hover {
+  background-color: rgb(102, 182, 108);
+}
+
+.link-none {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.summaryContent {
+    font-size:20px;
+}
+
+@media screen and (max-width: 837px) {
+.card {
+    width: 80%;
+}
+}
